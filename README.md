@@ -38,7 +38,9 @@ runMigrations({
   user: MONGO_USER,
   pass: MONGO_PASSWORD,
 });
+```
 
+```typescript
 // NestJS example
 // hello-world.schema.ts
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
@@ -53,19 +55,25 @@ export class HelloWorld {
 }
 
 export const HelloWorldSchema = SchemaFactory.createForClass(HelloWorld);
+```
 
+```typescript
 // Pure Schema
 // hello-world.schema.ts
-import { Schema } from 'mongoose';
+import { Schema, Document } from 'mongoose';
 
-export interface HelloWorld extends Document {
+export type HelloWorldDoc = HelloWorld & Document;
+
+export interface HelloWorld {
   message: string;
 }
 
 export const HelloWorldSchema = new Schema({
   message: String,
 });
+```
 
+```typescript
 // hello-world.migration.ts
 import { Connection } from 'mongoose';
 import { MigrationInterface } from 'migration-mongoose';

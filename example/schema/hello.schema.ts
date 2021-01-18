@@ -1,9 +1,11 @@
-import { Schema } from 'mongoose';
+import { Schema, Document } from 'mongoose';
 
-export interface IHelloWorld extends Document {
+export type HelloWorldDoc = HelloWorld & Document;
+
+export interface HelloWorld {
   message: string;
 }
 
-export const helloWorldSchema = new Schema({
+export const HelloWorldSchema = new Schema({
   message: String,
 });
