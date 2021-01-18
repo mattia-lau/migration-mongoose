@@ -1,0 +1,47 @@
+{
+  "name": "migration-mongoose",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "mattia.lau",
+  "license": "MIT",
+  "description": "Typescript based migration framework for mongoose, Support NestJS Schema as well.",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "publish": "npm publish",
+    "example": "ts-node example/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattia-lau/migration-mongoose.git"
+  },
+  "contributors": [
+    {
+      "name": "Mattia LAU"
+    }
+  ],
+  "keywords": [
+    "migration",
+    "mongoose",
+    "mongodb",
+    "mongoose migration",
+    "mongodb presave"
+  ],
+  "bugs": {
+    "url": "https://github.com/mattia-lau/migration-mongoose/issues"
+  },
+  "homepage": "https://github.com/mattia-lau/migration-mongoose#readme",
+  "dependencies": {
+    "mongoose": "^5.11.12"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.21",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  },
+  "peerDependencies": {
+    "mongoose": "^5.11.12"
+  }
+}
